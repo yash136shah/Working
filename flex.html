@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .welcome {
+            display:flex;    
+            flex-direction: row;    
+            flex-wrap: wrap;
+            align-content: space-between;
+            }
+
+    /* background-color:rgba(219, 219, 219, 0.5); */
+    
+    .welcome-header {font-size: var(--header-text-size);
+                    margin:1% 0 0 0;
+                    width:30%;
+                    color:black;
+                    text-align: center;
+                    }
+    
+
+    .welcome-intro {margin-top:10%;
+                    width:35%;
+                    }
+
+
+    .nav{width:70%;
+        margin:3% 0 0 0;
+        color:Black;
+            }
+
+    .nav>ul>li {display:inline;padding-left:50px;}
+
+    .nav a {color: black;
+        text-decoration: none;}
+    
+    .nav a:hover {
+            text-decoration: underline;
+            }
+
+    .container {display:flex; background-color:black;height:88vh;}
+    .sidebar-left {display: flex;
+            flex-direction: column;
+            background-color: gray;width:10%;}
+    
+    .content {color:white;width:80%;}
+
+    .sidebar-right {display: flex;
+            flex-direction: column;
+            background-color: gray;width:10%;}}
+
+
+</style>
+
+<body>
+    <div class="welcome">
+        <div class="welcome-header">
+            <div style="font-size:2em;"><strong>TakeStock</strong></div>
+            <div style="color:orange; font-size:1rem;text-align:center;"><strong>More Signal Less Noise</strong></div>
+        </div>
+
+        <div class="nav">
+                
+            <ul>
+                <li>
+                    <a href="#AboutUs">Market Overview</a>
+                </li>
+                
+                <li>
+                    <a href="#">Company Analysis</a>
+                </li>
+                
+                
+                <li>
+                    <a href="#">Sector & Industry</a>
+                </li>
+                
+                <li>
+                    <a href="#">Screener</a> 
+                </li>
+
+
+                <li>
+                    <a href="#">News</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+  
+
+        <div class="sidebar-left">
+            <ul>
+                <li>Item1</li>
+                
+                <li>Item2</li>
+                
+                <li>Item3</li>
+                
+                <li>Item4</li>
+                
+            </ul>    
+        </div>
+
+        <div class="content">Content
+            <input type="search">
+        </div>
+        
+        <div class="sidebar-right">
+            <ul>
+                <li>Item1</li>
+                
+                <li>Item2</li>
+                
+                <li>Item3</li>
+                
+                <li>Item4</li>
+                
+            </ul>    
+        </div>
+
+   
+    
+    </div>    
+
+
+
+
+</body>
+</html>
+
+
