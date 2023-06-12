@@ -10,14 +10,18 @@
 </head>
 
 <style>
-    html {width:100%;
-          box-sizing: border-box;}
+    
+    html {max-width:100%;
+          box-sizing: border-box;
+          }
+    /* overflow-x: hidden; */
+
     :root {--header-text-size: 3rem;
            --paragraph-text-color:black;
            --paragraph-text-size:1.25rem;
             }
 
-    .welcome {
+    .nav-container {
             display:flex;    
             flex-direction: row;    
             flex-wrap: wrap;
@@ -26,30 +30,39 @@
 
     /* background-color:rgba(219, 219, 219, 0.5); */
     
-    .welcome-header {font-size: var(--header-text-size);
+    .logo {font-size: var(--header-text-size);
                     margin:1% 0 0 0;
                     width:30%;
                     color:black;
                     text-align: center;
                     }
     
+    .mainPage{                
+          background-image:url('https://images.unsplash.com/photo-1439434768192-c60615c1b3c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470https://images.unsplash.com/photo-1439434768192-c60615c1b3c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80&q=80');
+          background-size: contain;
+          background-repeat: no-repeat;
+          min-height:100vh;}
 
-    .welcome-intro {margin-top:10%;
-                    width:35%;
+    .mainPage-intro {max-width:35%;
+                    min-height:100vh;
+                    display: block;
+                    position: relative;
+                    top:200px;
+                    left:60%;
                     }
 
 
-    .nav{width:70%;
+    .nav-links{width:70%;
         margin:3% 0 0 0;
         color:Black;
             }
 
-    .nav>ul>li {display:inline;padding-left:50px;}
+    .nav-links>ul>li {display:inline;padding-left:50px;}
 
-    .nav a {color: black;
+    .nav-links a {color: black;
         text-decoration: none;}
     
-    .nav a:hover {
+    .nav-links a:hover {
             text-decoration: underline;
             }
 
@@ -66,7 +79,7 @@
             }
 
 
-    #ProductOffering{
+    .ProductOffering{
         display: flex;
         flex-direction:row;
         padding:2% 2% 5% 0;
@@ -78,36 +91,20 @@
 
 <body>
     
-    <div class="welcome">
-        <div class="welcome-header">
-            <div style="font-size:3.5rem;"><strong>TakeStock</strong></div>
+    <div class="nav-container">
+        <div class="logo">
+            <div style="font-size:2.5rem;"><strong>TakeStock</strong></div>
             <div style="color:orange; font-size:1.5rem;text-align:center;"><strong>More Signal Less Noise</strong></div>
         </div>
 
-        <div class="nav">
+        <div class="nav-links">
                 
             <ul>
-                <li>
-                    <a href="#AboutUs">About Us</a>
-                </li>
-                
-                <li>
-                    <a href="#">Product Offerings</a>
-                </li>
-                
-                
-                <li>
-                    <a href="#">Investments & Partnerships</a>
-                </li>
-                
-                <li>
-                    <a href="#">Work with us</a> 
-                </li>
-
-
-                <li>
-                    <a href="#">Contact</a>
-                </li>
+                <li><a href="#AboutUs">About Us</a></li>
+                <li><a href="#ProductOffering">Product Offerings</a></li>
+                <li><a href="#">Investments & Partnerships</a></li>
+                <li><a href="#">Work with us</a> </li>
+                <li><a href="#">Contact</a></li>
 
             </ul>
         </div>
@@ -115,28 +112,15 @@
     
     </div>
 
-    <div style="display:flex; flex-direction:row;
-          background-image:url('https://images.unsplash.com/photo-1439434768192-c60615c1b3c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470https://images.unsplash.com/photo-1439434768192-c60615c1b3c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80&q=80');
-          background-size: contain;
-          background-repeat: no-repeat;
-          height:100vh;">
+    <div class="mainPage">    
+        <div class="mainPage-intro">
+            <h1 style="font-size:3rem;">Hello!</h1>
+            <p style="font-size:2rem;">We're TakeStock, a stock research system that democratizes sophisticated analytics, enabling investors/traders to focus on valuable signals and reduce noise.</p>
+            <p>Learn More</p>
+        </div>   
+    </div>
+    </div>
     
-
-    <div style="width:60%";>
-    </div>
-
-
-
-    <div class="welcome-intro">
-        <h1 style="font-size:3rem;">Hello!</h1>
-        <p style="font-size:2rem;">We're TakeStock, a stock research system that democratizes sophisticated analytics, enabling investors/traders to focus on valuable signals and reduce noise.</p>
-        <p>Learn More</p>
-    </div>
-        
-        
-    </div>
-    </div>
- 
     <div id="AboutUs" style="padding-top: 10%; padding-bottom:10%;">
 
         <div style="width:40rem; padding-right: 10%;">
@@ -169,71 +153,85 @@
 
         </div>
     
-    <div style="text-align: center; padding-top: 10%;">
-        <h1 style="font-size: var(--header-text-size);">Product Offering
+    <div id="ProductOffering" style="padding-top: 5%;">
+        <h1 style="text-align: center; font-size: var(--header-text-size);">Product Offering
         </h1>
+        <div style="font-size: var(--paragraph-text-size);margin-top:2%;padding:2% 0 2% 0;">
+        <div style="position: relative;left:10%;">
         <p>TakeStock is still in the early stages of development.</p>
-        <p> You can check out the product demo video below.</p>
-        
+        <p>The Prototype offers the features listed below and TakeStock hopes to offer them in its commercial version as well.</p>
+        <p>Additionally, we are working on leveraging AI to provide insightful news, stratgies, screeners.</p>
+        <p>TakeStock aims to be a premier financial market data analytics and data visualization company.</p>
+        </div>
+        </div>
     </div>
-    
-    <div id="ProductOffering">
-        <div style="width:60%; padding-left:2%;">
+   
+   
+   
+       
+    <div style="display:flex;flex-direction:row;margin-top:2%; padding-left:2%;padding-right:2%">
+
+        <div style="display:flex;width:60%;height:500px;margin-right:2%;margin-left:2%;">
             <iframe src="https://drive.google.com/file/d/1-o32Sf1_176S3hdQzjzlkFvkzq1K7DDr/preview" allowfullscreen=
-            "true" allow="autoplay" style="width:100%;height:600px;"></iframe>
+            "true" allow="autoplay" width="100%"></iframe>
         </div>
 
-        <div style="width:30%; padding-left:5%;">
-            <div style="background-color: black;color: white; text-align: center;">
-            <h5 >Comprehensive Stock Analysis</h5>
+        <div style="width:25%;border-left: 6px solid rgb(3, 17, 37);;padding-left:2%">            
+            
+            <div>
+            <h5>COMPREHENSIVE STOCK ANALYSIS</h5>
             <p>Fundamental | Technical | Quantitative</p> 
             </div>   
-            <h>Navigate Analytics at Speed.</h>
-            <p>> In-depth analytics, strategy testing and screeners to find alpha generating opprotunties.
+            <div style="padding-left:20px;padding-right:20px;outline:10px;">
+            <ul>
+            <li>Navigate analytics at speed.</li>
+            <li>Test strategies</li>
+            <li> Easily switch between top-down and bottom-up research.</li>
+            <li> Analyze multiple stocks. </li>
+            </ul>
+            </div>    
+        
+            <hr>
 
-                > Easily switch between top-down and bottom-up research, and navigate various analytics tools seamlessly.
-                
-                > Analyze competitors and multiple stocks from your screeners, watchlist, and portfolio across analytics. – Moving beyond summary tables, into visually rich analytics with customized options!               
-            </p>
-        </div>
-    </div>
+            <div>
+            <h5 >INTUITIVE USABILITY</h5>
+            </div>   
+            <div style="padding-left:20px;padding-right:20px">
+            <ul>
+            <li>Clear and simple interface.
+            </li>
+            <li>Consistent design.
+            </li>
+            <li>User-friendly workflows.
+            </li>
+            <li>Customizable settings.
+            </li>
+            </ul>
+            </div>    
+        
+            <hr>
+            <div style="padding-right:5%;">
+                <div">
+                <h5>CURATED INFORMATION</h5>
+                </div>   
+                <div style="padding-left:20px;padding-right:20px">
+                <ul>
+                <li>Tailored stock insights.</li>
+                <li>Information and layout curated to meet individual requirements.
+                </li>
+                </ul>
+                </div>    
 
-    <div class="card" style="width: 20rem;">
-        <img class="card-img-top" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Comprehensive Stock Analysis</h5>
-            <p class="card-text">Fundamental | Technical | Quantitative</p>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">> In-depth analytics, strategy testing and screeners to find alpha generating opprotunties.</li>
-            <li class="list-group-item">> Easily switch between top-down and bottom-up research, and navigate various analytics tools seamlessly.</li>
-            <li class="list-group-item">> Analyze competitors and multiple stocks from your screeners, watchlist, and portfolio across analytics. – Moving beyond summary tables, into visually rich analytics with customized options!</li>
-        </ul>
-        <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
         </div>
+           
+        
     </div>
+        
+            
     
-    <div class="card" style="width: 20rem;">
-        <img class="card-img-top" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Comprehensive Stock Analysis</h5>
-            <p class="card-text">Fundamental | Technical | Quantitative</p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">> In-depth analytics, strategy testing and screeners to find alpha generating opprotunties.</li>
-            <li class="list-group-item">> Easily switch between top-down and bottom-up research, and navigate various analytics tools seamlessly.</li>
-            <li class="list-group-item">> Analyze competitors and multiple stocks from your screeners, watchlist, and portfolio across analytics. – Moving beyond summary tables, into visually rich analytics with customized options!</li>
-        </ul>
-        <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-        </div>
-    </div>
-</div>
-</div>
-    <script src="animation.js"></script>
+
+
 </body>
 </html> 
 
