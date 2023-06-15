@@ -4,90 +4,360 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
-<style>
-     html {font-size: 18px;
-          box-sizing: border-box;}
 
-    .grid {display: grid;
-          grid-template-columns: repeat(8, 1fr);  
-          grid-template-areas: "logo logo logo nav nav nav nav nav"
-                                "bg bg bg bg bg bg bg bg"
-                                "po po po po po po po po";
-          grid-column-gap:2%;
-          align-content: center;                  
-          justify-content: center;}
+    <style>
 
-    .grid > * {min-width: 0;}
 
-    .logo {grid-area:logo;}
-    .logo * {text-align: center;font-weight: bold;}
-    .navbarTs {grid-area:nav;
-            align-self:center;
-            }
-    .navbarTs a {margin:3%;text-decoration: none; color:black;
-                font-size:1.2rem;}
-    .navbarTs a:hover {text-decoration: underline;}
-    .mainPage{grid-area:bg;        
-          background-image:url('https://images.unsplash.com/photo-1439434768192-c60615c1b3c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470https://images.unsplash.com/photo-1439434768192-c60615c1b3c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80&q=80');
-          background-size: contain;
-          background-repeat: no-repeat;
-          min-height: 100vh;}
+        html {font-size: 16px;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;}
+        
 
-    .mainPage-intro {max-width:35%;
-            display: inline-block;
-            position:relative;
-            left:60%;
-            top:10rem;
-            max-height: 10%;
-            }
-    .mainPage-intro > h1 {font-size: 3rem;}
-    .mainPage-intro > h2 {font-size: 2.5rem;}
 
-    #productOffering {grid-area:po;height:100vh;}
 
-</style>
-<body>
-    <div class="grid">
-            <div class="logo">
-                <div style="font-size:3rem;">TakeStock</div>
-                <div style="color:rgb(255, 166, 0); font-size:2.5rem">More Signal Less Noise</div>
-            </div>
+        h1 {font-size: 3rem;}
+        h2 {font-size: 1.8rem;}
+        a {font-size:1.2rem;}
+        p {font-size:1.2rem;}
 
-            <div class="navbarTs">
-                <nav>
+        a {text-decoration:none;color:black;}
+        a:hover {text-decoration: underline;color:black;}
 
-                    <a href="#productOffering">Product</a>
-                    <a href="#InvestmentPartnerships">Investment & Partnerships</a>
-                    <a href="#Company">Company</a>
-                    <a href="#Contact Us">Contact Us</a>
-                    
-                </nav>
-                
-            </div>  
 
-            <div class="mainPage">    
-                <div class="mainPage-intro">
-                    <h1>Hello!</h1>
-                    <h4>We're TakeStock, a stock research system that democratizes sophisticated analytics, enabling investors/traders to focus on valuable signals and reduce noise.</h4>
-                    <p>Learn More</p>
-                </div>   
-            </div>
 
-            <div id="productOffering">
-                <h1 style="text-align: center; font-size: var(--header-text-size);">Product
-                </h1>
-                <div style="padding-left:10%;">
-                    <p>TakeStock is still in the early stages of development.</p>
-                    <p>The Prototype offers the features listed below and TakeStock hopes to offer them in its commercial version as well.</p>
-                    <p>Additionally, we are working on leveraging AI to provide insightful news, strategies, screeners.</p>
-                    <p>TakeStock aims to be a premier financial market data analytics and data visualization company.</p>
-                </div>
-            </div>
+        .container {display: grid;
+                    margin:0;
+                    grid-template-columns: repeat(4 1fr);
+                    grid-template-columns: 1fr 2fr;
+                    grid-template-areas: "logo navb"
+                                        "mp mp"
+                                        "aus aus"
+                                        "po po"
+                                        "ip ip"
+                                        "wus wus"
+                                        "con con";}
+
+
+        .container > * {min-width:0px;align-self: center;text-align:center;}
+        /* border:1px solid; */
        
-    </div>
+
+
+        .logo {grid-area: logo;}
+        .logo h1 {margin-bottom: 0;margin-top: 0;}
+        .logo h2 {color:orange;margin-top: 0;}
+
+
+        .navb{grid-area:navb;}
+        .navb > * {margin:1rem;}
+
+
+
+        .mainPage{grid-area:mp;
+                min-height:100vh;
+                background-image:url('https://images.unsplash.com/photo-1439434768192-c60615c1b3c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470https://images.unsplash.com/photo-1439434768192-c60615c1b3c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80&q=80');
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: relative;  
+                
+                
+                }
+        .mainPage div {
+                    position: absolute;
+                    max-width:20%;
+                    right: 13%;
+                    top: 10%;
+                    border-radius: 5% 5% 5% 5%;
+                    padding:1%;
+                    }
+
+       
+        .mainPage > * {text-align: left;}
+
+        .container :not(.mainPage) > div {padding-top:2%;}
+                
+        .aboutUs{grid-area:po;
+                 min-height:100vh;
+                 background-color: rgb(3, 17, 37);
+                 color:white;
+                 padding-top:5%;}
+
+
+        .aboutUs-intro {display: flex;
+                        align-content: center;
+                        text-align: left;
+                        margin:5%;
+                        background-color: white;
+                        color:black;
+                        margin-top: 2%;
+                        padding:5%;
+                        border-radius:25px;}
+
+        .aboutUs-intro  > div {margin:5%;}
+       
+
+        .productOffering-offer {display:flex;
+                                flex-direction:row;
+                                justify-content: center;
+                                text-align:left;
+                                padding:3%;
+                                background-color: rgb(3, 17, 37)}
+
+        .productOffering-offer > div {margin:0% 1% 0% 1%;
+                                   padding:2%;
+                                   max-width:30%;
+                                   background-color: rgb(253, 253, 253); 
+                                   justify-self: center;
+                                   color:rgb(3, 17, 37);
+                                   border-radius:25px;}
+
+        .productOffering-offer h2 {margin-top: 0;
+                                   text-align:center;
+                                   }
+        
+        .productOffering-offer p::before {content: "› ";}
+
+
+
+
+        .investorPartner{grid-area:ip;min-height:100vh;}
+        .workwithus{grid-area:wus;min-height:100vh;}
+        .contact{grid-area:con;min-height:100vh;}
+
+        @media screen and (max-width: 600px) {
+            html {
+                font-size: 10px;
+            }
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-areas:
+                "logo"
+                "navb"
+                "mp"
+                "aus"
+                "po"
+                "ip"
+                "wus"
+                "con";
+            }
+
+            .logo {grid-area: logo;
+                }
+
+            .navb > * {margin:0.5rem;}
+                
+            .aboutUs-intro {
+                flex-direction: column;
+                padding: 2%;
+                margin: 2%;
+            }
+            .productOffering-offer {
+                flex-direction: column;
+                margin:2%;
+            }
+            .productOffering-offer > div {margin:1% 1% 1% 1%; justify-self: center;
+                text-align:center;
+                min-width:100%;
+                align-self: center;}
+
+            iframe {
+                height: 200px;
+            }
+           
+            .mainPage{grid-area:mp;
+                    min-height:0;
+                    background-image:none; 
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    display: flex;  
+                    justify-content: center;
+                    align-content: center;
+                    padding:5%;
+                    
+                    
+                    }
+            .mainPage div {
+                        
+                        position: static;
+                        max-width:100%;      
+                        padding:1%;
+                        }
+
+        
+            .mainPage > * {text-align: left;}
+          
+            }
+                        
+
+        @media screen and (min-width: 600px) and (max-width: 1270px) {
+            html {
+                font-size: 12px;
+                
+            }
+            .container {
+                        grid-template-columns: repeat(1, 1fr);
+                        grid-template-areas: "logo"
+                                            "navb"
+                                            "mp"
+                                            "aus"
+                                            "po"
+                                            "ip"
+                                            "wus"
+                                            "con";}
+                                            
+            .logo {grid-area: logo;
+                }
+
+
+            .mainPage{grid-area:mp;
+                    min-height:0;
+                    background-image: none;
+                    display: flex;
+                    justify-content: center;
+                    align-content:center;
+                    }
+
+            
+            .mainPage div {  
+                        position: static;
+                        max-width:70%;      
+                        padding:5%;
+                        }
+
+           
+        }
+        
+       
     
+        @media screen and (min-width: 1270px) {
+        html {
+            font-size: 18px;
+        }
+        }
+        
+
+    </style>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>TakeStock</h1>
+            <h2>More Signal. Less Noise.</h2>
+        </div>
+
+
+        <div class="navb">
+                        <a href="#AboutUs">About Us</a>
+                        <a href="#ProductOffering">Product</a>
+                        <a href="#InvestandPartner">Invest in TakeStock</a>
+                        <a href="#Workwithus">Work with us</a> 
+                        <a href="#ContactUs">Contact</a>
+        </div>
+
+        <div class="mainPage">
+            <div>
+                <h1>Hello!</h1>
+                <h2>We're TakeStock, a stock research system that democratizes sophisticated analytics, 
+                    enabling investors/traders to focus on valuable signals and reduce noise.</h2>
+                <a href="#AboutUs">Learn More</a>
+            </div>
+        </div>
+
+
+        <div class="aboutUs" id="AboutUs">
+            <h1>About TakeStock</h1>
+            <div class="aboutUs-intro">
+
+                
+                    <div>
+                        <h1> Hi, I'm Yash.</h1>
+            
+                        <p>I am the developer and founder of TakeStock, based on the stunning Vancouver Island in Canada.
+                        </p>
+                        <p>My background in accounting and equity markets has given me valuable experience, which now fuels my passion for using mathematics and technology to address complex financial and human challenges. 
+                            
+                        <h1>Why was TakeStock created?</h1>
+                    
+                        <p >
+                            TakeStock was born out of a personal need for a comprehensive stock analysis system. Like many investors and traders, I spent significant time collecting and processing data from various sources and analyzing using tools such as Excel and Jupyter Notebook.
+                        </p>
+                        <p>Existing systems in the market often lack either depth or usability. Those with rich data sources and integrity may sacrifice usability and data visuals, while still requiring considerable time for data processing to perform sophisticated analysis. Additionally, none of them offer the capability to analyze multiple stocks across analytics with rich visuals and comprehensive information.
+                        </p>
+                        <p>
+                            These challenges inspired the creation of TakeStock, an accessible and complete tool for researching and analyzing stocks, empowering users to make informed investment decisions and generate alpha returns.
+                        </p>
+            
+                    </div>
+                    <div>
+                        <h1>Current Position</h1>
+                        <p>TakeStock is still in the early stages of development.</p>
+                        <p>The Prototype offers the features listed below and TakeStock hopes to offer them in its commercial version as well.</p>
+                        <p>Additionally, we are working on leveraging AI to provide insightful news, stratgies, screeners.</p>
+                    </div>
+
+
+            </div>
+        <div>
+
+        <div class="productOffering" id="ProductOffering">
+                <h1 style="display:inline-block;text-align: left;">Key Features</h1>
+                <div class="productOffering-offer">    
+                        <div>
+                            <h2>Comprehensive Stock Analysis</h2>
+                            <p>Fundamental | Technical | Quantitative</p> 
+                            <p>Navigate analytics at speed.</p>
+                            <p>Test strategies</p>
+                            <p>Analyze multiple stocks. </p>
+                        </div>
+                    
+                        <div>
+                            <h2>Intuitive Usability</h2>
+                            <p>Clear and simple interface.
+                            </p>
+                            <p>Consistent design.
+                            </p>
+                            <p>User-friendly workflows.
+                            </p>
+                            <p>Customizable settings.
+                            </p> 
+                        </div>
+                    
+                        <div>
+                            <h2>Curated Information</h2>    
+                            <p>Tailored stock insights.</p>
+                            <p>Information and layout curated to meet individual requirements.
+                            </p>
+                        </div>
+
+                </div>
+                
+                <div style="width:1000px;max-width:80%;display:inline-block;justify-content:center;align-content: center;padding:0;">
+                    <iframe src="https://drive.google.com/file/d/1-o32Sf1_176S3hdQzjzlkFvkzq1K7DDr/preview" allow="autoplay" width="100%" height="600
+                    " style="padding:0; border-radius:25px;"></iframe>
+                </div>
+
+        </div>
+
+
+        <div class="investorPartner" id="InvestandPartner">
+            <h1>Investors & Partner</h1>
+        </div>
+
+        <div class="workwithus" id="Workwithus">
+            <h1>Work with us</h1>
+        </div>
+
+
+
+        <div class="contact" id="ContactUs">
+            <h1>Contact Us</h1>
+        </div>
+
+
+
+    </div>    
 </body>
 </html>
